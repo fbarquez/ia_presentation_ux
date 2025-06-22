@@ -1,0 +1,386 @@
+:root {
+  --bg-dark: #0a0a0c;
+  --accent: #2e8bff;
+  --font: 'Inter', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  background: var(--bg-dark);
+  color: white;
+  font-family: var(--font);
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 1rem 2rem;
+  z-index: 10;
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.hero, section {
+  min-height: 100vh;
+  padding: 4rem 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero h1, section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p, section p, section ul {
+  font-size: 1.2rem;
+  color: #ccc;
+}
+
+/* === Intro Slide === */
+.intro-slide {
+  position: relative;
+  height: 100vh;
+  background: #0a0a0c;
+  color: white;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.intro-content {
+  z-index: 2;
+}
+
+.intro-title {
+  font-size: 2.8rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.intro-subtitle {
+  font-size: 1.2rem;
+  color: #aaa;
+  margin-bottom: 2rem;
+}
+
+.start-button {
+  background: #3b5bff;
+  color: white;
+  border: none;
+  padding: 0.9rem 2.5rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(59, 91, 255, 0.4);
+  transition: all 0.3s ease;
+}
+
+.start-button:hover {
+  background: #627aff;
+  transform: scale(1.05);
+}
+
+.background-animation {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, #2f004f 0%, #0c0025 50%, #330066 100%);
+  overflow: hidden;
+  z-index: 1;
+}
+
+.background-animation::before {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  background-image: radial-gradient(circle, #ff00ff44 2%, transparent 20%),
+                    radial-gradient(circle, #00ffff33 2%, transparent 20%);
+  background-size: 40% 40%;
+  animation: pulseDots 10s linear infinite;
+  opacity: 0.25;
+  filter: blur(40px);
+}
+
+@keyframes pulseDots {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-25%, -25%) scale(1.1); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+
+
+
+/* === Modern Outline Slide === */
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.outline-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.outline-item {
+  background: rgba(255, 255, 255, 0.04);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.outline-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.outline-item h3 {
+  font-size: 1.1rem;
+  color: var(--accent, #2e8bff);
+  margin-bottom: 0.5rem;
+}
+
+.outline-item p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: #ddd;
+}
+
+/* === Fade-in animation === */
+.outline-item {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.outline-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.cta {
+  background-color: var(--accent);
+  border: none;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 1.5rem;
+}
+
+#google_translate_toggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  background: #ffffff1a;
+  padding: 0.4rem 0.6rem;
+  border-radius: 4px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+#google_translate_element {
+  position: fixed;
+  top: 3rem;
+  right: 1rem;
+  background: #000000d9;
+  padding: 0.5rem;
+  border-radius: 4px;
+  z-index: 1000;
+}
+
+#helpIcon {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  background: #ffffff1a;
+  padding: 0.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+#helpTooltip {
+  position: fixed;
+  bottom: 3rem;
+  right: 1rem;
+  background: #000000c0;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  z-index: 1000;
+}
+
+#helpIcon:hover + #helpTooltip,
+#helpTooltip:hover {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#courseInfoIcon {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  font-size: 1.2rem;
+  background: #ffffff1a;
+  padding: 0.4rem 0.6rem;
+  border-radius: 4px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+#courseTooltip {
+  position: fixed;
+  top: 3rem;
+  left: 1rem;
+  background: #000000cc;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 1000;
+}
+
+#courseInfoIcon:hover + #courseTooltip,
+#courseTooltip:hover {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  color: #999;
+  background: #000;
+  font-size: 0.9rem;
+}
+
+
+/* === Why AI Products Often Fail Slide === */
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 6rem;
+}
+
+
+.slide-fail {
+  background: #0a0a0c;
+  color: #fff;
+  padding: 6rem 2rem; /* Más espacio arriba/abajo */
+  text-align: center;
+}
+
+.fail-pipeline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6rem; /* Más espacio entre imagen y pipeline */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.pipeline-illustration {
+  width: 100%;
+  max-width: 720px;
+  animation: fadeUp 1s ease-out forwards;
+}
+
+.pipeline {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 4rem; /* Más separación horizontal */
+}
+
+.stage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  opacity: 0;
+  animation: fadeUp 0.8s ease forwards;
+}
+
+.stage:nth-child(1) { animation-delay: 0.2s; }
+.stage:nth-child(3) { animation-delay: 0.4s; }
+.stage:nth-child(5) { animation-delay: 0.6s; }
+.stage:nth-child(7) { animation-delay: 0.8s; }
+
+.label {
+  background: #d400ff;
+  color: white;
+  padding: 0.8rem 1.3rem;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 1.05rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+
+.desc {
+  font-size: 0.95rem;
+  color: #ccc;
+  max-width: 150px;
+  text-align: center;
+}
+
+.pipe {
+  width: 30px;
+  height: 2px;
+  background: #888;
+  align-self: center;
+  animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; width: 0; }
+  to { opacity: 1; width: 30px; }
+}
+
+@media (max-width: 768px) {
+  .pipeline {
+    flex-direction: column;
+    align-items: center;
+  }
+  .pipe {
+    width: 2px;
+    height: 30px;
+  }
+}
+
