@@ -119,3 +119,10 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+document.querySelectorAll('.outline-item h3 a').forEach(link => {
+    if (link.textContent.trim().toLowerCase() === 'introduction') {
+      link.setAttribute('href', '#intro-grammarly');
+    }
+  });
+
+

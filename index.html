@@ -40,14 +40,14 @@
 
   <main>
     <section class="hero" id="intro">
-      <h1>Presented by Fernando Barriga</h1>
+      <h1>By Chen Qilei & Fernando Barriga</h1>
       <p>for English Class</p>
     </section>
 
 <section id="intro" class="hero intro-slide">
   <div class="intro-content">
     <h1 class="intro-title">Making AI Useful</h1>
-    <p class="intro-subtitle">Turning machine learning into real products that solve real problems</p>
+    <p class="intro-subtitle">How Grammarly Turns Machine Learning into Real Product Value</p>
     <button class="start-button" onclick="document.getElementById('outline').scrollIntoView({ behavior: 'smooth' });">
       Start
     </button>
@@ -55,79 +55,129 @@
   <div class="background-animation"></div>
 </section>
 
-
 <section id="outline" class="hero">
-  <h2 class="section-title">Outline <small>(What we’ll cover today)</small></h2>
+  <h2 class="section-title">Outline <small></small></h2>
   <div class="outline-grid">
     <div class="outline-item">
       <h3><a href="#intro">Introduction</a></h3>
-      <p>What “Making AI Useful” means and why it matters</p>
+      <p>What Grammarly is and why it's a good example of applied AI</p>
     </div>
     <div class="outline-item">
-      <h3><a href="#why-fail">Why AI Products Often Fail</a></h3>
-      <p>Common mistakes when turning models into products</p>
+      <h3><a href="#why-it-matters">Why “Making AI Useful” Matters</a></h3>
+      <p>Why models alone are not enough — and why product thinking matters</p>
     </div>
     <div class="outline-item">
-      <h3><a href="#model-to-product">From Model to Product</a></h3>
-      <p>Steps to go from algorithm to usable experience</p>
+      <h3><a href="#grammarly-product">Grammarly as a Product</a></h3>
+      <p>UX, design, and how the AI is delivered to users</p>
     </div>
     <div class="outline-item">
-      <h3><a href="#ai-in-action">AI in Action</a></h3>
-      <p>How ChatGPT, Spotify DJ, Notion AI, and others succeed</p>
+      <h3><a href="#grammarly-tech">How Grammarly Works (Technology)</a></h3>
+      <p>The NLP and machine learning models behind the tool</p>
     </div>
     <div class="outline-item">
-      <h3><a href="#design-ux">Designing for AI</a></h3>
-      <p>Building trust, clarity, and control into the experience</p>
+      <h3><a href="#strategy-business">Strategy & Business Value</a></h3>
+      <p>The product vision, growth, and how Grammarly became successful</p>
     </div>
     <div class="outline-item">
-      <h3><a href="#challenges">Challenges</a></h3>
-      <p>Technical, ethical, and practical obstacles</p>
+      <h3><a href="#tech-limitations">Technical Limitations</a></h3>
+      <p>Weaknesses of language models: bias, tone, ambiguity</p>
     </div>
     <div class="outline-item">
-      <h3><a href="#students">You as a Student</a></h3>
-      <p>How to start building useful AI-driven projects</p>
+      <h3><a href="#evaluation-good">What Works</a></h3>
+      <p>Success factors: clarity, trust, feedback loop, adoption</p>
+    </div>
+    <div class="outline-item">
+      <h3><a href="#evaluation-bad">What Doesn’t</a></h3>
+      <p>Risks, failures, and ethical/technical concerns</p>
     </div>
     <div class="outline-item">
       <h3><a href="#final-thoughts">Final Thoughts</a></h3>
-      <p>Core lessons and takeaways</p>
-    </div>
-    <div class="outline-item">
-      <h3><a href="#qa">Q&A + Tools</a></h3>
-      <p>Open discussion and practical next steps</p>
+      <p>What we learned and how to apply this to future AI projects</p>
     </div>
   </div>
 </section>
 
-<section id="why-fail" class="hero slide-fail">
-  <h2 class="section-title">Why AI Products Often Fail</h2>
-  <!-- <p class="subtitle">Most AI projects fail not because of the model—<em>but because they forget the user</em></p>-->
-  <div class="fail-pipeline">
-    <img src="undraw_artificial-intelligence_fuvd.svg" alt="AI Illustration" loading="lazy" class="pipeline-illustration" />
-    <div class="pipeline">
-      <div class="stage">
-        <span class="label">Data</span>
-        <span class="desc">Bad or biased data</span>
+
+<section id="intro-grammarly" class="hero intro-grammarly-slide">
+  <div class="grammarly-mindmap">
+    <h2 class="slide-title">
+      What 
+      <span class="wiki-tooltip-container">
+        <a href="https://www.grammarly.com" target="_blank" class="grammarly-link">Grammarly</a>
+        <div class="wiki-tooltip wiki-top">
+          <strong>Founded:</strong> 2009<br/>
+          <strong>Creators:</strong> Alex Shevchenko, Max Lytvyn, and Dmytro Lider<br/>
+          Grammarly is an AI-powered writing assistant that helps with grammar, spelling, and style.<br/>
+          <a href="https://en.wikipedia.org/wiki/Grammarly" target="_blank">More ↗</a>
+        </div>
+      </span>
+      Is
+    </h2>
+    <p class="mindmap-subtitle">Why It’s a Good Example of Applied AI</p>
+    <div class="mindmap-layout">
+      <svg class="mindmap-lines">
+        <line x1="50%" y1="50%" x2="50%" y2="15%" />
+        <line x1="50%" y1="50%" x2="20%" y2="80%" />
+        <line x1="50%" y1="50%" x2="80%" y2="80%" />
+      </svg>
+      <div class="mindmap-node center">
+        <img src="Symbol.svg" alt="Grammarly Logo" class="mindmap-logo" />
       </div>
-      <div class="pipe"></div>
-      <div class="stage">
-        <span class="label">Model</span>
-        <span class="desc">Misaligned with product needs</span>
+      <div class="mindmap-node top">
+        <div class="node-content">
+          <strong>Wide Adoption</strong>
+          <span>Millions of users worldwide</span>
+        </div>
       </div>
-      <div class="pipe"></div>
-      <div class="stage">
-        <span class="label">Code</span>
-        <span class="desc">No clear user benefit</span>
+      <div class="mindmap-node left">
+        <div class="node-content">
+          <strong>Writing Assistance</strong>
+          <span>Grammar and spelling checker</span>
+        </div>
       </div>
-      <div class="pipe"></div>
-      <div class="stage">
-        <span class="label">UX</span>
-        <span class="desc">Poor user experience</span>
+      <div class="mindmap-node right">
+        <div class="node-content">
+          <strong>Machine Learning</strong>
+          <span>Utilizes AI to enhance suggestions</span>
+        </div>
       </div>
     </div>
-        <p class="flow-summary">Most AI projects fail not because of the model—<em>but because they forget the user</em></p>
-    <!-- y así sucesivamente --<p class="flow-summary">Bad data → Model misalignment → No value → Bad experience → Product failure</p> -->
+    <div class="grammarly-preview-frame">
+      <!--<div class="preview-toggle">Grammarly Platform Preview</div>-->
+      <iframe src="https://www.grammarly.com" loading="lazy"></iframe>
+    </div>
   </div>
 </section>
+
+<section id="why-useful" class="slide-section">
+  <h2><span class="highlight">Why <strong>"Making AI Useful"</strong> Matters</span></h2>
+  <p class="subtext">Why models alone are not enough — and why product thinking matters</p>
+
+  <div class="ai-diagram">
+    <!-- Left: Diagram -->
+    <div class="diagram">
+      <div class="node node-1">Accurate Model<br><span>ML output, trained and evaluated</span></div>
+      <div class="arrow arrow-down">↓</div>
+      <div class="node node-2">Product Thinking<br><span>Align with user needs & goals</span></div>
+      <div class="arrow arrow-right">→</div>
+      <div class="node node-3">System Design Integration<br><span>Deployment, latency, UX, feedback</span></div>
+      <div class="arrow arrow-down-2">↓</div>
+      <div class="result">Useful AI Experience<br><span>Real-world value & adoption</span></div>
+    </div>
+
+    <!-- Right: Image -->
+    <div class="visual">
+      <img src="undraw_artificial-intelligence_fuvd.svg" alt="AI Illustration" />
+      <p><span>ML + UX + Engineering<br>= <strong>Real Value</strong></span></p>
+    </div>
+    <p class="source">
+  Source: <a href="https://docs.aws.amazon.com/wellarchitected/latest/machine-learning-lens/" target="_blank"><em>AWS Machine Learning Lens</em></a> &nbsp;|&nbsp;
+  <a href="https://www.datascience-pm.com/ai-lifecycle/?utm_source=chatgpt.com" target="_blank"><em>Data Science PM - AI Lifecycle</em></a>
+</p>
+
+  </div>
+</section>
+
 
 
 
